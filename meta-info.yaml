@@ -6,7 +6,7 @@ docker_hub_tag : ""
 site_level_config_version: 1.0
 default_var_prefix: spark_master_default_var
 runtime_vars:
-  - master_runtime_var_host
+  - spark_master_runtime_var_host
 host_requirements:
     firewall:
     - ports: 8080
@@ -30,4 +30,3 @@ docker_run_parameters:
       - "8080:8080"
       - "7077:7077"
       - "6066:6066"
-  command: /bin/bash
