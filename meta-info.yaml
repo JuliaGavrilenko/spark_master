@@ -22,7 +22,7 @@ host_requirements:
       action: accept
       ipv6: true
 docker_run_parameters:
-  hostname: *master_runtime_var_host
+  hostname: *spark_master_runtime_var_host
   privileged: true
   detached: true
   tty: true

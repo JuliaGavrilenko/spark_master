@@ -11,6 +11,9 @@ mkdir -p $SPARK_MASTER_LOG
 
 #ln -sf /dev/stdout $SPARK_MASTER_LOG/spark-master.out
 
+echo "Copying spark-defaults.conf to /spark/conf"
+cp /etc/simple_grid/config/spark-defaults.conf /spark/conf/
+
 #echo "Copying spark-master service to /etc/init.d"
 #cp /etc/simple_grid/config/spark-master /etc/init.d/
 #chmod 755 /etc/init.d/spark-master
@@ -23,3 +26,6 @@ trap '' HUP
 #service spark-master start
 #echo "Checking status of Spark Master"
 #service spark-master status
+
+echo "All Set!"
+exit 0
